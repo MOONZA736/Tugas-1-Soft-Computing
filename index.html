@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Soft Computing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="header-background">
+        <header>
+            <h1>Aplikasi Soft Computing</h1>
+        </header>
+    </div>
+
+    <div class="content-box">
+        <div class="nav-tabs">
+            <button class="tab-button active">Tugas 1</button>
+            <button class="tab-button">Tugas 2</button>
+            <button class="tab-button">Tugas 3</button>
+        </div>
+
+        <div class="main-content">
+            <h2>Tugas 1 — Pengantar Soft Computing</h2>
+            <p>Soft Computing adalah cabang kecerdasan buatan yang berfokus pada kemampuan sistem untuk menangani ketidakpastian, toleransi terhadap kesalahan, dan fleksibilitas dalam pengambilan keputusan. Berikut tiga algoritma utamanya:</p>
+
+            <div class="algoritma-buttons">
+                <button onclick="loadMateri('fuzzy')" class="alg-button active-alg">Algoritma Fuzzy</button>
+                <button onclick="loadMateri('jst')" class="alg-button">Jaringan Syaraf Tiruan</button>
+                <button onclick="loadMateri('genetika')" class="alg-button">Algoritma Genetika</button>
+            </div>
+            
+            <hr class="alg-separator">
+
+            <main id="content-area">
+                </main>
+        </div>
+    </div>
+
+    <footer>
+        <p>Aplikasi Berbasis Flask & Soft Computing</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script>
+        loadMateri('fuzzy'); 
+    </script>
+</body>
+</html>
